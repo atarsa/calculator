@@ -14,37 +14,36 @@
    <div class="container">
         <div id="display" class="display">
             <p id="displayResult">0</p>
-            <p id="displayOperation">0</p>
-        </div> 
+        </div>    
         <div class="clear-btn">
-            <input type="button" value="Back" id="back" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="Clear" id="clear"class="btn" onclick="handlers.displayValue()">
+            <input type="button" value="Back" id="back" class="btn" onclick="handlers.back()">
+            <input type="button" value="Clear" id="clear"class="btn" onclick="handlers.clear()">
         </div>
 
         <div class="numbers">
-            <input type="button" value="1" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="2" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="3" class="btn" onclick="handlers.displayValue()">
+            <input type="button" value="1" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="2" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="3" class="btn" onclick="handlers.getValue()">
 
-            <input type="button" value="4" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="5" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="6" class="btn" onclick="handlers.displayValue()">
+            <input type="button" value="4" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="5" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="6" class="btn" onclick="handlers.getValue()">
 
-            <input type="button" value="7" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="8" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="9" class="btn" onclick="handlers.displayValue()">
+            <input type="button" value="7" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="8" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="9" class="btn" onclick="handlers.getValue()">
 
-            <input type="button" value="0" class="btn" onclick="handlers.displayValue()">
-            <input type="button" value="." class="btn" onclick="handlers.displayValue()">
+            <input type="button" value="0" class="btn" onclick="handlers.getValue()">
+            <input type="button" value="." class="btn" onclick="handlers.getValue()">
             <input type="button" value="=" class="btn" onclick="handlers.operate()">
 
             
         </div>
         <div class="operators">
-            <input type="button" value="/" class="btn" onclick="handlers.displayOperator()">
-            <input type="button" value="*" class="btn" onclick="handlers.displayOperator()">
-            <input type="button" value="-" class="btn" onclick="handlers.displayOperator()">
-            <input type="button" value="+" class="btn" onclick="handlers.displayOperator()"> 
+            <input type="button" value="/" class="btn" onclick="handlers.getOperator()">
+            <input type="button" value="*" class="btn" onclick="handlers.getOperator()">
+            <input type="button" value="-" class="btn" onclick="handlers.getOperator()">
+            <input type="button" value="+" class="btn" onclick="handlers.getOperator()"> 
     
   
     </div>
