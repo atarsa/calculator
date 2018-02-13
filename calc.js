@@ -8,9 +8,8 @@ for( var i = 0; i < keys.length; i++){
         var display = document.querySelector('#displayResult');
         var inputValue = display.innerHTML;
         var btnValue = this.value;
-        console.log(btnValue);
-      
-        // if clear key is pressed, erase everything
+                
+         // if clear key is pressed, erase everything
         if (btnValue === "C"){
             display.innerHTML = "";
             decimalAdded = false;
@@ -25,9 +24,9 @@ for( var i = 0; i < keys.length; i++){
             equation = equation.replace(/x/g,'*').replace(/÷/g,'/');
 
             // check the last character of equation; if an operator or a decimal remove it
-            if (operators.lastIndexOf(lastChar) > -1 || lastChar === "." ){
+            if (operators.lastIndexOf(lastChar) > -1 || lastChar === "." )
                 equation = equation.replace(/.$/,''); 
-            }
+            
             if(equation) 
                 display.innerHTML = eval(equation);
             
@@ -59,6 +58,15 @@ for( var i = 0; i < keys.length; i++){
                 display.innerHTML += btnValue;
                 decimalAdded = true;
             }
+        }
+        // if DEL button is pressed, delete last input
+        else if (btnValue === "DEL"){
+            // convert inputValue to array, remove last element, convert back to string
+            inputValue = inputValue.split("");
+            inputValue = inputValue.pop().
+            inputValue = inputValue.join("");
+            display.innerHTML = inputValue;
+            decimalAdded = false; 
         }
         // if any other key pressed - append it
         else {
