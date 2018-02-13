@@ -17,13 +17,14 @@ h2{
 }
 .container{
     margin: 0 auto;
+    
     background-color: rgb(102, 98, 98);
     display: grid;
     max-width: 300px;
     max-height: 450px;
     grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
     grid-template-rows: 10px 1fr 10px repeat(5,1fr) 10px;
-    border: 10px solid rgb(61, 60, 60);
+    border: 5px solid rgb(61, 60, 60);
     border-radius: 5px;
     -webkit-box-shadow: 4px 4px 3px 0px rgba(110,110,110,1);
     -moz-box-shadow: 4px 4px 3px 0px rgba(110,110,110,1);
@@ -70,34 +71,36 @@ h2{
    ============
 */
 .display{
-    background-color: beige;
+    background: beige;
     border-radius: 5px;
-    margin-right: 5px;
+    
+    margin-right: 25px;
     margin-left: 5px;
-    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
-    box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
- 
-}
-.display p{
+    width: 250px;
+    /* Typography */
     font-weight: 700;
     text-align: right;
     font-size: 2em;
-    padding-right: 5px;
-    margin: 5px 0;
+    padding: 15px 10px;
+    letter-spacing: 1px;
+    
+    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
+    
 }
 
 .clear-btn input[type="button"]{
     background-color: rgb(165,42,42);
     border-radius: 5px;
     border: 1px solid rgb(165,42,42);
-    margin: 10px 5px; 
+    margin: 5px 5px; 
     padding: 10%;
     font-size: 1.5em;
 }  
 .clear-btn input[type="button"]:hover{
-    background-color: rgba(151, 1, 1, 0.925);
-    border: 1px solid rgb(151, 1, 1, 0.925);
+    background-color: rgb(160, 41, 41);
+    border: 1px solid rgb(160, 41, 41);
 } 
 .numbers input[type="button"]{
     background-color: rgba(150, 144, 135, 0.993);

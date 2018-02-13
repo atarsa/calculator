@@ -5,7 +5,7 @@ var decimalAdded = false;
 
 for( var i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
-        var display = document.querySelector('#displayResult');
+        var display = document.querySelector('.display');
         var inputValue = display.innerHTML;
         var btnValue = this.value;
                 
