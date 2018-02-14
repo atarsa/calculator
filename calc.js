@@ -5,13 +5,15 @@ var decimalAdded = false;
 
 for( var i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
-        var display = document.querySelector('.display');
-        var inputValue = display.innerHTML;
+        var display = document.getElementById('display');
+        
+        var inputValue = display.value;
         var btnValue = this.value;
-                
-         // if clear key is pressed, erase everything
+         
+             
+        //if clear key is pressed, erase everything
         if (btnValue === "C"){
-            display.innerHTML = "";
+            display.value = "";
             decimalAdded = false;
         }
 
@@ -28,7 +30,7 @@ for( var i = 0; i < keys.length; i++){
                 equation = equation.replace(/.$/,''); 
             
             if(equation) 
-                display.innerHTML = eval(equation);
+                display.value = eval(equation);
             
             decimalAdded = false;    
         }
@@ -40,14 +42,14 @@ for( var i = 0; i < keys.length; i++){
 
             // Only add operator if input is not empty and there is so operator on the last char
             if(inputValue != "" && operators.indexOf(lastChar) === -1)
-                display.innerHTML += btnValue;
+                display.value += btnValue;
             
             // Allow minus sign as first operator
             else if (inputValue === "" && btnValue === "-")
-                display.innerHTML += btnValue;
+                display.value += btnValue;
             // Replace the last operator (if exists) with newly passed operator
             if (operators.indexOf(lastChar) > -1 && inputValue.length > 1)
-                display.innerHTML = inputValue.replace(/.$/,btnValue)
+                display.value = inputValue.replace(/.$/,btnValue)
 
             decimalAdded = false;    
         }   
@@ -55,7 +57,7 @@ for( var i = 0; i < keys.length; i++){
         // Prevent pressing more than one decimal point
         else if (btnValue === '.'){
             if (decimalAdded === false){
-                display.innerHTML += btnValue;
+                display.value += btnValue;
                 decimalAdded = true;
             }
         }
@@ -65,12 +67,12 @@ for( var i = 0; i < keys.length; i++){
             inputValue = inputValue.split("");
             inputValue = inputValue.pop().
             inputValue = inputValue.join("");
-            display.innerHTML = inputValue;
+            display.value = inputValue;
             decimalAdded = false; 
         }
         // if any other key pressed - append it
         else {
-            display.innerHTML += btnValue;
+            display.value += btnValue;
         }
     }
 }
