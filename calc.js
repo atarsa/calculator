@@ -2,6 +2,7 @@
 var keys = document.querySelectorAll('[type="button"]');
 var operators = ['+','-','x','÷'];
 var decimalAdded = false;
+var resultDisplayed = false;
 
 for( var i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
@@ -29,9 +30,10 @@ for( var i = 0; i < keys.length; i++){
             if (operators.lastIndexOf(lastChar) > -1 || lastChar === "." )
                 equation = equation.replace(/.$/,''); 
             
-            if(equation) 
+            if(equation)
                 display.value = eval(equation);
             
+            resultDisplayed = true;
             decimalAdded = false;    
         }
         // No more than one operator should be added
@@ -51,6 +53,7 @@ for( var i = 0; i < keys.length; i++){
             if (operators.indexOf(lastChar) > -1 && inputValue.length > 1)
                 display.value = inputValue.replace(/.$/,btnValue)
 
+            resultDisplayed = false;
             decimalAdded = false;    
         }   
         
@@ -63,16 +66,30 @@ for( var i = 0; i < keys.length; i++){
         }
         // if DEL button is pressed, delete last input
         else if (btnValue === "DEL"){
-            // convert inputValue to array, remove last element, convert back to string
-            inputValue = inputValue.split("");
-            inputValue = inputValue.pop().
-            inputValue = inputValue.join("");
-            display.value = inputValue;
-            decimalAdded = false; 
+            if(resultDisplayed === true){
+                display.value;
+            }
+            else{
+                // convert inputValue to array, remove last element, convert back to string
+                inputValue = inputValue.split("");
+                inputValue = inputValue.pop().
+                inputValue = inputValue.join("");
+                display.value = inputValue;
+                decimalAdded = false; 
+            }
+            
         }
+        // prevent changing result output
+        else if(resultDisplayed === true){
+            display.value = "";
+            display.value += btnValue;
+            resultDisplayed = false;
+        } 
         // if any other key pressed - append it
         else {
+            resultDisplayed = false;
             display.value += btnValue;
+            
         }
     }
 }
