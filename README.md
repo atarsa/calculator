@@ -6,7 +6,7 @@ First attempt with using arrays to store user input. Failed!
 The second attept with the use of `eval()` function, which takes string and evaluates JS code.
 
 ##### Bugs:
-- [ ] display after clicking "=" can be changed by the user;
+- [x] ~~display after clicking "=" can be changed by the user;~~
 
 ##### Feauture to implement:
 - [ ] keyboard support;
