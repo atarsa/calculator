@@ -10,3 +10,5 @@ The second attept with the use of `eval()` function, which takes string and eval
 
 ##### Feauture to implement:
 - [ ] keyboard support;
+
+[Live version here](https://elpetit69.github.io/calculator/)
