@@ -7,7 +7,7 @@ The second attept with the use of `eval()` function, which takes string and eval
 
 ##### Bugs:
 - [x] ~~display after clicking "=" can be changed by the user;~~
-- [] - display too big in firefox browser
+- [ ] - display too big in firefox browser
 
 ##### Feauture to implement:
 - [ ] keyboard support;
