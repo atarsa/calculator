@@ -2,62 +2,71 @@
     Grid
    ====================== 
 */
-body{
+body {
     margin: 50px auto;
     background: white;
-	background: radial-gradient(circle, #fff 20%, #ccc);
+    background: radial-gradient(circle, #fff 20%, #ccc);
     background-size: cover;
     font-family: 'Orbitron', sans-serif;
 }
-h2{
+
+h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
     letter-spacing: 0.1em
 }
-.container{
+
+.container {
     margin: 0 auto;
-    
+
     background-color: rgb(102, 98, 98);
     display: grid;
     max-width: 300px;
     max-height: 450px;
     grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
-    grid-template-rows: 10px 1fr 10px repeat(5,1fr) 10px;
+    grid-template-rows: 10px 1fr 10px repeat(5, 1fr) 10px;
     border: 5px solid rgb(61, 60, 60);
     border-radius: 5px;
-    -webkit-box-shadow: 4px 4px 3px 0px rgba(110,110,110,1);
-    -moz-box-shadow: 4px 4px 3px 0px rgba(110,110,110,1);
-    box-shadow: 4px 4px 3px 0px rgba(110,110,110,1);
+    -webkit-box-shadow: 4px 4px 3px 0px rgba(110, 110, 110, 1);
+    -moz-box-shadow: 4px 4px 3px 0px rgba(110, 110, 110, 1);
+    box-shadow: 4px 4px 3px 0px rgba(110, 110, 110, 1);
 }
-.display{
+
+.display {
     grid-column: 2 /6;
     grid-row: 2/3;
+    max-width: 270px;
 
 }
-.clear-btn{
+
+.clear-btn {
     grid-column: 2/6;
     grid-row: 4/5;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
- 
+
 }
-#del{
+
+#del {
     grid-column: 1/2;
-}    
-#clear{
+}
+
+#clear {
     grid-column: 2/3;
 }
-.numbers{
+
+.numbers {
     grid-column: 2/5;
     grid-row: 5/9;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
-   
-    }
-.operators{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+}
+
+.operators {
     grid-column: 5/6;
     grid-row: 5/9;
     display: grid;
@@ -70,65 +79,71 @@ h2{
     styles
    ============
 */
-#display{
+#display {
     background: beige;
     border-radius: 5px;
     margin-right: 5px;
     margin-left: 5px;
-    
+
     /* Typography */
     font-weight: 700;
     text-align: right;
     font-size: 2em;
     padding: 15px 10px;
     letter-spacing: 1px;
-    
-    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
-    box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.75);
-    
+
+    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.75);
+
 }
 
-.clear-btn input[type="button"]{
-    background-color: rgb(165,42,42);
+.clear-btn input[type="button"] {
+    background-color: rgb(165, 42, 42);
     border-radius: 5px;
-    border: 1px solid rgb(165,42,42);
-    margin: 5px 5px; 
+    border: 1px solid rgb(165, 42, 42);
+    margin: 5px 5px;
     padding: 10%;
     font-size: 1.5em;
-}  
-.clear-btn input[type="button"]:hover{
+}
+
+.clear-btn input[type="button"]:hover {
     background-color: rgb(160, 41, 41);
     border: 1px solid rgb(160, 41, 41);
-} 
-.numbers input[type="button"]{
+}
+
+.numbers input[type="button"] {
     background-color: rgba(150, 144, 135, 0.993);
     border: 1px solid rgba(150, 144, 135, 0.993);
     border-radius: 5px;
-    margin: 5px; 
+    margin: 5px;
     padding: 5%;
     font-size: 1.2em;
 }
-.numbers input[type="button"]:hover{
+
+.numbers input[type="button"]:hover {
     background-color: rgba(124, 121, 115, 0.993);
     border: 1px solid rgba(124, 121, 115, 0.993);
 }
-.operators input[type="button"]{
+
+.operators input[type="button"] {
     background-color: rgb(247, 166, 67);
     border: 1px solid rgb(250, 154, 36);
     border-radius: 5px;
-    margin: 5px; 
+    margin: 5px;
     padding: 10%;
     font-size: 1.2em;
 }
-.operators input[type="button"]:hover{
+
+.operators input[type="button"]:hover {
     background-color: rgb(250, 154, 36);
     border: 1px solid rgb(250, 154, 36);
 }
+
 .clear-btn input[type="button"],
 .numbers input[type="button"],
-.operators input[type="button"]{
-    -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);   
+.operators input[type="button"] {
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
 }
